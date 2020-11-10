@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CreditoService } from 'src/app/services/credito.service';
 import { Credito } from '../models/credito';
 
 @Component({
@@ -10,13 +11,12 @@ export class CreditoConsultaComponent implements OnInit {
   creditos: Credito[];
   searchText: string;
 
-  constructor() { }
+  constructor(private creditoService: CreditoService) { }
 
   ngOnInit() {
-    this.creditos = [
-      {identificacion: '1111',  nombre: 'Juan', empleados: 5 , activos: 32222},
-      {identificacion: '2222', nombre: 'Marta', empleados: 6 , activos: 32},
-      ]
+    this.creditoService.get().subscribe(result => {
+      this.creditos = result;
+    });
 
   }
 
