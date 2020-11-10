@@ -1,1 +1,30 @@
-<p>credito-registro works!</p>
+<p>lo hicimos! lo hicimos! lo hicimos! siiiii!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h2>Registro de credito</h2>
+            <form>
+                <div class="form-group">
+                    <label>Identificacion</label>
+                    <input type="text" name="identificacion" [(ngModel)]="credito.identificacion" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>Nombre</label>
+                    <input type="text" name="nombre" [(ngModel)]="credito.nombre" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>Empleado</label>
+                    <input type="number" name="empleado" [(ngModel)]="credito.empleados" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>Activos</label>
+                    <input type="number" name="activos" [(ngModel)]="credito.activos" class="form-control" />
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-primary mr-1" (click)="add()">Register</button>
+                    <button class="btn btn-secondary" type="reset">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
