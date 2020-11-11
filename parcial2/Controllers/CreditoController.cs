@@ -46,7 +46,7 @@ namespace parcial2.Controllers
                 Nombre = creditoInput.Nombre,
                 Empleados = creditoInput.Empleados,
                 Activos = creditoInput.Activos,
-                CreditoFinal=creditoInput.CreditoFinal
+               
             };
             return credito;
         }

@@ -10,7 +10,7 @@ namespace Entidades
         public string Nombre { get; set; }
         public int Empleados { get; set; }
         public decimal Activos { get; set; }
-        public long CreditoFinal { get; set; }
+        public int CreditoFinal { get; set; }
         public void CalculaEmpresa()
         {
             if (Empleados >= 10 && Activos < 501)

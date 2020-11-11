@@ -12,6 +12,8 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { CreditoConsultaComponent } from './Empresa/credito-consulta/credito-consulta.component';
 import { CreditoRegistroComponent } from './Empresa/credito-registro/credito-registro.component';
 import { AppRoutingModule } from './app-routing.module';
+import { AbonoRegistroComponent } from './Empresa/abono-registro/abono-registro.component';
+import { AbonoConsultaComponent } from './Empresa/abono-consulta/abono-consulta.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { AppRoutingModule } from './app-routing.module';
     CounterComponent,
     FetchDataComponent,
     CreditoConsultaComponent,
-    CreditoRegistroComponent
+    CreditoRegistroComponent,
+    AbonoRegistroComponent,
+    AbonoConsultaComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
