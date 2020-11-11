@@ -13,7 +13,7 @@ namespace parcial2.Models
         public string Nombre { get; set; }
         public int Empleados { get; set; }
         public decimal Activos { get; set; }
-        public int CreditoFinal { get; set; }
+        public long CreditoFinal { get; set; }
     }
 
     public class CreditoViewModel : CreditoInputModel

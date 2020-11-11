@@ -3,4 +3,5 @@ export class Credito {
     nombre: string;
     empleados: number;
     activos: number;
+    creditoFinal: number;
 }
