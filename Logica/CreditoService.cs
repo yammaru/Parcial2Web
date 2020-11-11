@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using Datos;
 using Entidades;
 
@@ -20,7 +22,7 @@ namespace Logica
 
                 if (creditoBuscada != null)
                 {
-                    return new GuardarPersonaResponse("Error, ya esta registrado");
+                    return new GuardarCreditoResponse("Error, ya esta registrado");
                 }
                
                 _context.creditos.Add(credito);
@@ -45,19 +47,17 @@ namespace Logica
             try
             {
 
-                var personaVieja =_context.Personas.Find(personaNueva.Identificacion);
-                if (personaVieja != null)
+                var creditoVieja =_context.creditos.Find(creditoNueva.Identificacion);
+                if (creditoVieja != null)
                 {
-                    personaVieja.Nombre = personaNueva.Nombre;
-                    personaVieja.Identificacion = personaNueva.Identificacion;
-                    personaVieja.Direccion = personaNueva.Direccion;
-                    personaVieja.Barrio = personaNueva.Barrio;
-                    personaVieja.Costo=personaNueva.Costo;
-                    personaVieja.Estado=personaNueva.Estado;
-                    _context.Personas.Update(personaNueva);
+                    creditoVieja.Nombre = creditoNueva.Nombre;
+                    creditoVieja.Identificacion = creditoNueva.Identificacion;
+                    creditoVieja.Empleados = creditoNueva.Empleados;
+                    creditoVieja.Activos = creditoNueva.Activos;
+                    _context.creditos.Update(creditoNueva);
                     _context.SaveChanges();
 
-                    return ($"El registro {personaNueva.Nombre} se ha eliminado satisfactoriamente.");
+                    return ($"El registro {creditoNueva.Nombre} se ha eliminado satisfactoriamente.");
                 }
                 else
                 {
@@ -108,7 +108,7 @@ namespace Logica
         {
             return _context.creditos.Count();
         }
-        public int TotalizarPagado()
+      /*  public int TotalizarPagado()
         {
             return _context.creditos.Count(p => p.Estado == "Pagado");
         }
@@ -116,16 +116,20 @@ namespace Logica
         {
             return _context.creditos.Count(p => p.Estado == "Debe");
         }
-    }
+        public int TotalizarDebe()
+        {
+            return _context.creditos.Count(p => p.Estado == "Debe");
+        }
+    }*/
 
     public class GuardarCreditoResponse
     {
-        public GuardarPersonaResponse(Credito credito)
+        public GuardarCreditoResponse(Credito credito)
         {
             Error = false;
             Credito = credito;
         }
-        public GuardarPersonaResponse(string mensaje)
+        public GuardarCreditoResponse(string mensaje)
         {
             Error = true;
             Mensaje = mensaje;
