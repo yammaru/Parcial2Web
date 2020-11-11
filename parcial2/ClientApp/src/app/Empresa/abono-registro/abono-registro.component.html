@@ -1,1 +1,23 @@
 <p>abono-registro works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h2>Registro de Personas</h2>
+            <form>
+                <div class="form-group">
+                    <label>Identificacion</label>
+                    <input type="text" name="identificacion" [(ngModel)]="abono.identificacion" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>Abono</label>
+                    <input type="number" name="abono" [(ngModel)]="abono.abono" class="form-control" />
+                </div>
+
+                <div class="text-center">
+                    <button class="btn btn-primary mr-1" (click)="add()">Register</button>
+                    <button class="btn btn-secondary" type="reset">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

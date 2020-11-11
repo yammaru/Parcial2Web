@@ -26,7 +26,7 @@ export class CreditoService {
     return this.http.post<Credito>(this.baseUrl + 'api/Credito', credito)
     .pipe(
     tap(_ => this.handleErrorService.log('datos enviados')),
-    catchError(this.handleErrorService.handleError<Credito>('Registrar CreCredito', null))
+    catchError(this.handleErrorService.handleError<Credito>('Registrar Credito', null))
     );
     }
 

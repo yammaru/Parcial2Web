@@ -1,1 +1,30 @@
 <p>abono-consulta works!</p>
+<div class="row">
+    <div class="col-6">
+        <input [(ngModel)]="searchText" type="text" class="formcontrol" placeholder="filtro">
+    </div>
+</div>
+<hr>
+<table class="table table-striped" *ngIf='creditos && creditos.length'>
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Identificación</th>
+            <th scope="col">Nombre </th>
+            <th scope="col">Empleados</th>
+            <th scope="col">Activos</th>
+            <th scope="col">Credito</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let credito of creditos; index as i ">
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ credito.identificacion }} </td>
+            <td>{{ credito.nombre }}</td>
+            <td>{{credito.empleados }}</td>
+            <td>{{ credito.activos }}</td>
+            <td>{{credito.creditoFinal}}</td>
+        </tr>
+    </tbody>
+</table>
