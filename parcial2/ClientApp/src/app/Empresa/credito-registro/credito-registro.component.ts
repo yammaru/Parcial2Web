@@ -21,8 +21,8 @@ export class CreditoRegistroComponent implements OnInit {
     this.credito = new Credito();
     this.credito.identificacion = '';
     this.credito.nombre = '';
-    this.credito.empleados = 0;
-    this.credito.activos = 0;
+    this.credito.empleados ;
+    this.credito.activos ;
 
     this.formGroup = this.formBuilder.group({
       identificacion: [this.credito.identificacion, Validators.required],

@@ -1,8 +1,8 @@
-<p>qu triste triste..., peeeero lo hicimos! lo hicimos! lo hicimos! siiiii!</p>
+<p>lo hicimos! lo hicimos! lo hicimos! siiiii!</p>
 <div class="container">
     <div class="row">
         <div class="col-md-6 offset-md-3">
-            <h2>Registro de Personas</h2>
+            <h2>Registro</h2>
             <form [formGroup]="formGroup">
                 <div class="form-group">
                     <label>Identificacion</label>
@@ -19,19 +19,18 @@
 </div>
 
 </div>
-
 <div class="form-group ">
     <label>Empleados</label>
-    <input type="number" name="empleado" [(ngModel)]="credito.empleado" formControlName="barrio" class="form-control" [ngClass]="{ 'is-invalid':  control.empleados.errors}" />
+    <input type="number " name="empleado" [(ngModel)]="credito.empleados" formControlName="empleados" class="form-control" [ngClass]="{ 'is-invalid':  control.empleados.errors}" />
     <div *ngIf="control.empleados.errors"  class="invalid-feedback">
-        <div *ngIf="control.empleados.errors.required">Se require empleados bajo su mundo</div>
+        <div *ngIf="control.empleados.errors.required">Se require el direccion</div>
 </div>
 </div>
 <div class="form-group ">
     <label>Activos</label>
-    <input type="number " name="activos" [(ngModel)]="credito.activos" formControlName="activos" class="form-control" [ngClass]="{ 'is-invalid':  control.activos.errors}" />
+    <input type="number" name="activos" [(ngModel)]="credito.activos" formControlName="activos" class="form-control" [ngClass]="{ 'is-invalid':  control.activos.errors}" />
     <div *ngIf="control.activos.errors"  class="invalid-feedback">
-        <div *ngIf="control.activos.errors.required">Se require el activos del mes</div>
+        <div *ngIf="control.activos.errors.required">Se require el activo</div>
 </div>
 </div>
 
