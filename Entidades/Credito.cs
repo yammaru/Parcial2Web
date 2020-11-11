@@ -13,7 +13,7 @@ namespace Entidades
         public int CreditoFinal { get; set; }
         public void CalculaEmpresa()
         {
-            if (Empleados >= 10 && Activos < 501)
+            if (Empleados <= 10 && Activos < 501)
             {
                 CreditoFinal = 100000000;
             }

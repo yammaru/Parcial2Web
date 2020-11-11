@@ -28,6 +28,7 @@ namespace parcial2.Models
             Nombre = credito.Nombre;
             Empleados = credito.Empleados;
             Activos = credito.Activos;
+            CreditoFinal=credito.CreditoFinal;
              
         }
         public int CreditoFinal { get; set; }
