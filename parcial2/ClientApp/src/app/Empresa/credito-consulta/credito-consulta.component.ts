@@ -14,7 +14,7 @@ export class CreditoConsultaComponent implements OnInit {
   constructor(private creditoService: CreditoService) { }
 
   ngOnInit() {
-    this.creditoService|.get().subscribe(result => {
+    this.creditoService.get().subscribe(result => {
       this.creditos = result;
     });
 
